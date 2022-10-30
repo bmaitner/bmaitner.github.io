@@ -84,7 +84,7 @@ author:
   avatar           : "profile.png"
   bio              : "Your biography for the left-hand sidebar"
   location         : "Buffalo, NY"
-  employer         : "Department of Geography, /nUniversity at Buffalo"
+  employer         : "Department of Geography, \nUniversity at Buffalo"
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=Brian+Maitner"
   googlescholar    : "https://scholar.google.com/citations?user=GVb9deIAAAAJ&hl"
   email            :
