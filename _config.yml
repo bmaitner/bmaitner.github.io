@@ -81,10 +81,10 @@ analytics:
 # Site Author
 author:
   name             : "Brian Maitner"
-  avatar           : Resized_IMG_20180724_004533.jpg
+  avatar           : "profile.png"
   bio              : "Your biography for the left-hand sidebar"
   location         : "Buffalo, NY"
-  employer         : "Department of Geography, University at Buffalo"
+  employer         : "Department of Geography, /nUniversity at Buffalo"
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=Brian+Maitner"
   googlescholar    : "https://scholar.google.com/citations?user=GVb9deIAAAAJ&hl"
   email            :
