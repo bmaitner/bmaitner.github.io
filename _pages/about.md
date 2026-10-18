@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "Overview"
-seo_title: "Brian Maitner | Ecologist & Biodiversity Scientist, University at Buffalo"
+seo_title: "Brian Maitner | Ecologist & Biodiversity Scientist, University of South Florida"
 excerpt: "Brian Maitner studies the origin, maintenance, and conservation of biodiversity, combining Big Data, macroecology, biogeography, plant and animal functional traits, and field research."
 author_profile: true
 redirect_from: 
