@@ -6,6 +6,22 @@ excerpt: 'We show how bootstrapping can be used to estimate trait distributions,
 date: 2021-08-01
 venue: 'Authorea'
 paperurl: 'https://doi.org/10.22541/au.162196147.76797968/v1'
+authors:
+  - "Maitner, Brian"
+  - "Halbritter, Aud"
+  - "Telford, Richard"
+  - "Strydom, Tanya"
+  - "Chacon-Labella, Julia"
+  - "Lamanna, Christine"
+  - "Sloat, Lindsey"
+  - "Kerkhoff, Andrew"
+  - "Messier, Julie"
+  - "Rasmussen, Nick"
+  - "Pomati, Francesco"
+  - "Merz, Ewa"
+  - "Vandvik, Vigdis"
+  - "Enquist, Brian"
+doi: "10.22541/au.162196147.76797968/v1"
 citation: 'Brian Maitner, Aud Halbritter, Richard Telford, Tanya Strydom, Julia Chacon-Labella, Christine Lamanna, Lindsey Sloat, Andrew Kerkhoff, Julie Messier, Nick Rasmussen, Francesco Pomati, Ewa Merz, Vigdis Vandvik, Brian Enquist (2021). &quot;On estimating the shape and dynamics of phenotypic distributions in ecology and evolution&quot; <i>Authorea</i>'
 ---
 

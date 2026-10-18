@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Brian Maitner"
 title_separator          : "-"
 name                     : &name "Dr. Brian S. Maitner"
-description              : &description "personal description"
+description              : &description "Brian Maitner is an ecologist and biodiversity scientist at the University at Buffalo studying macroecology, biogeography, functional traits, and conservation using Big Data and field research."
 url                      : https://bmaitner.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "bmaitner/bmaitner.github.io"
@@ -57,23 +57,28 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter
+  username               : &twitter "BrianMaitner"
 facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Open Graph/Twitter default site image
+og_image                 : "profile.png" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
+  type                   : Person
+  name                   : "Brian S. Maitner"
   links: # An array of links to social media profiles
+    - "https://orcid.org/0000-0002-2118-9880"
+    - "https://scholar.google.com/citations?user=GVb9deIAAAAJ"
+    - "https://github.com/bmaitner"
+    - "https://www.researchgate.net/profile/Brian-Maitner"
+    - "https://twitter.com/BrianMaitner"
 
 
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
+  provider               : false # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          :
 
@@ -103,13 +108,13 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         :
-  orcid            : "https://orcid.org/my-orcid?orcid=0000-0002-2118-9880"
+  orcid            : "https://orcid.org/0000-0002-2118-9880"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "@BrianMaitner"
+  twitter          : "BrianMaitner"
   vine             :
   weibo            :
   xing             :
@@ -146,6 +151,32 @@ exclude:
   - package.json
   - tmp
   - vendor
+  - "*.Rproj"
+  - .Rproj.user
+  # AcademicPages template placeholders, hidden so search engines don't index
+  # them. Delete a line once you replace that page with real content.
+  # (Placeholder collection items are hidden via `defaults` below.)
+  - _pages/archive-layout-with-content.md
+  - _pages/collection-archive.html
+  - _pages/cv.md
+  - _pages/markdown.md
+  - _pages/non-menu-page.md
+  - _pages/page-archive.html
+  - _pages/portfolio.html
+  - _pages/talkmap.html
+  - _pages/talks.html
+  - _pages/teaching.html
+  - _pages/terms.md
+  - _pages/year-archive.html
+  - _pages/category-archive.html
+  - _pages/tag-archive.html
+  - files/paper1.pdf
+  - files/paper2.pdf
+  - files/paper3.pdf
+  - markdown_generator
+  - talkmap
+  - talkmap.py
+  - talkmap.ipynb
 keep_files:
   - .git
   - .svn
@@ -244,6 +275,29 @@ defaults:
       layout: talk
       author_profile: true
       share: true
+
+  # Hide AcademicPages template placeholder content so search engines don't
+  # index it. Delete a scope here once you replace that content with your own.
+  - scope:
+      path: "_posts"
+    values:
+      published: false
+  - scope:
+      path: "_talks"
+    values:
+      published: false
+  - scope:
+      path: "_teaching"
+    values:
+      published: false
+  - scope:
+      path: "_portfolio"
+    values:
+      published: false
+  - scope:
+      path: "_publications/template"
+    values:
+      published: false
 
 # Sass/SCSS
 sass:

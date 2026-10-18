@@ -6,6 +6,14 @@ excerpt: 'In this preprint, we examine global biases in trait data and the facto
 date: 2022-10-01
 venue: 'bioRxiv'
 paperurl: 'https://doi.org/10.1101/2022.09.26.509556'
+authors:
+  - "Maitner, Brian"
+  - "Gallagher, Rachael"
+  - "Svenning, Jens-Christian"
+  - "Tietje, Melanie"
+  - "Wenk, Elizabeth H."
+  - "Eiserhardt, Wolf L."
+doi: "10.1101/2022.09.26.509556"
 citation: 'Brian Maitner, Rachael Gallagher, Jens-Christian Svenning, Melanie Tietje, Elizabeth H. Wenk, Wolf L. Eiserhardt. (2022). &quot; Socioeconomics and biogeography jointly drive geographic biases in our knowledge of plant traits: a global assessment of the Raunkiærian shortfall in plants &quot; <i> bioRxiv. </i> '
 
 ---
