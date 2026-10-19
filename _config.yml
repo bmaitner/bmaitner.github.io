@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Brian Maitner"
+title                    : "Maitner Lab"
 title_separator          : "-"
 name                     : &name "Dr. Brian S. Maitner"
-description              : &description "Brian Maitner is an ecologist and biodiversity scientist at the University of South Florida studying macroecology, biogeography, functional traits, and conservation using Big Data and field research."
+description              : &description "The Maitner Lab at the University of South Florida, led by ecologist Brian Maitner, studies macroecology, biogeography, functional traits, and conservation using Big Data and field research."
 url                      : https://bmaitner.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "bmaitner/bmaitner.github.io"
@@ -78,9 +78,11 @@ social:
 
 # Analytics
 analytics:
+  # TODO(Brian): create a GA4 property at analytics.google.com, paste its
+  # Measurement ID (starts with "G-") below, then set provider to "google".
   provider               : false # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : # e.g. "G-XXXXXXXXXX"
 
 
 # Site Author
@@ -90,9 +92,12 @@ author:
   bio              : "Studying biodiversity using Big Data and field research"
   location         : "St. Petersburg, FL"
   employer         : "University of South Florida"
+  employer_url     : "https://www.usf.edu/"
+  job_title        : # TODO(Brian): e.g. "Assistant Professor of Integrative Biology"
+  knows_about      : ["Macroecology", "Biogeography", "Functional traits", "Biodiversity informatics", "Conservation biology", "Community ecology"]
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=Brian+Maitner"
   googlescholar    : "https://scholar.google.com/citations?user=GVb9deIAAAAJ&hl"
-  email            :
+  email            : # TODO(Brian): your USF email, e.g. "you@usf.edu"
   researchgate     : "https://www.researchgate.net/profile/Brian-Maitner"
   uri              :
   bitbucket        :

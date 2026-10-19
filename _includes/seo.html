@@ -123,7 +123,12 @@
       "url" : {{ seo_url | jsonify }},
       {% if site.author.avatar %}"image" : {{ site.author.avatar | prepend: "/images/" | prepend: seo_url | jsonify }},{% endif %}
       {% if site.author.bio %}"description" : {{ site.author.bio | jsonify }},{% endif %}
-      {% if site.author.employer %}"affiliation" : { "@type" : "Organization", "name" : {{ site.author.employer | jsonify }} },{% endif %}
+      {% if site.author.job_title %}"jobTitle" : {{ site.author.job_title | jsonify }},{% endif %}
+      {% if site.author.email %}"email" : {{ site.author.email | prepend: "mailto:" | jsonify }},{% endif %}
+      {% if site.author.knows_about %}"knowsAbout" : {{ site.author.knows_about | jsonify }},{% endif %}
+      {% if site.author.employer %}{% capture employer_json %}{ "@type" : "CollegeOrUniversity", "name" : {{ site.author.employer | jsonify }}{% if site.author.employer_url %}, "url" : {{ site.author.employer_url | jsonify }}{% endif %} }{% endcapture %}
+      "affiliation" : {{ employer_json }},
+      "worksFor" : {{ employer_json }},{% endif %}
       {% if site.author.location %}"workLocation" : { "@type" : "Place", "name" : {{ site.author.location | jsonify }} },{% endif %}
       "sameAs" : {{ site.social.links | jsonify }}
     }
