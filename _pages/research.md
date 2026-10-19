@@ -15,13 +15,9 @@ The Maitner Lab asks where life on Earth is, why it is there, and what is about 
 
 Climate change is pushing species into conditions they have never experienced. We map that exposure as it happens and, increasingly, before it happens. Our team built a [global early warning system](/publication/2026-06-08-serra-diaz_early_warning) that forecasts, months in advance, where species will face extreme heat (*Nature Climate Change*, 2026). We showed that in 2024, the hottest year on record, [one in six vertebrate species](/publication/2025-08-25-merow_hottest_year) was exposed to unprecedented heat across more than a quarter of its range (*PNAS*, 2025). We have also found that [high-diversity tree communities](/publication/2025-06-23-boonman_tree_exposure) face novel climates even under minimal warming. When fires swept through the Amazon and Australia, we used the same data pipelines to rapidly quantify the damage to biodiversity, including how [deregulation, drought, and fire impact Amazonian species](/publication/2021-09-01-feng_amazon_fire) (*Nature*, 2021).
 
-**Now:** we are validating these forecasts against what actually happens on the ground, and using remote sensing to detect vegetation responses to stressors such as storm surge and saltwater intrusion, which are pressing issues for Florida's coasts.
-
 ## Mapping the species we know least about
 
 Most species are rare, and rare species are the hardest to study and the most likely to need protection. About [36.5% of land plant species are exceedingly rare](/publication/2019-11-01-enquist_commonness_of_rarity) (*Science Advances*, 2019), and our knowledge of what plants are like is [strongly biased toward wealthy, well-studied regions](/publication/2023-06-27-maitner_raunkiaeran_shortfall) (*New Phytologist*, 2023). We develop [species distribution models built for small samples](/publication/2026-01-21-maitner_small_sample_sdm) (*Ecography*, 2026), so we can map species with only a handful of records.
-
-**Now:** we are producing open range maps, with future projections and uncertainty estimates, for every plant species with occurrence data, and developing new ways to recover usable locations for specimen records that lack coordinates.
 
 ## Open biodiversity data and software
 
@@ -37,8 +33,6 @@ I helped found the [Open Traits Network](/publication/2020-02-17-gallagher_open_
 ## Functional traits, from plots to the planet
 
 The traits of organisms, such as leaf size, wood density, and body size, link species to how ecosystems function. We showed that [bootstrapping outperforms community-weighted approaches](/publication/2023-09-07-maitner_bootstrapping_traits) for estimating the shapes of trait distributions (*Methods in Ecology and Evolution*, 2023), and released the traitstrap R package to do it. Our field work spans four continents, from desert to tundra to tropical forest. I co-led international Plant Functional Traits Course expeditions in China, Svalbard, Peru, Norway, and South Africa, each bringing together 25 to 50 participants from more than 10 countries.
-
-**Now:** we are linking entire trait distributions, not just averages, to ecosystem processes such as carbon flux, and asking whether functionally rare species play outsized roles.
 
 ## Biological invasions
 
