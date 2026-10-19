@@ -41,14 +41,6 @@ Our work involves close collaborations with conservation organizations, aimed at
 <!-- TODO(Brian): Name partner organizations and a concrete outcome (a report,
 a policy, a protected-area decision). Funders look for exactly this. -->
 
-## Funding and support
-
-<!-- TODO(Brian): List current and past funders and grant names, e.g.
-- National Science Foundation (Award #XXXXXXX): "Project title"
-Remove this section if you prefer not to list them. -->
-
-[TODO: list funders and awards]
-
 ## Get involved
 
 Interested in working with us? See [Join the Lab](/join/).
