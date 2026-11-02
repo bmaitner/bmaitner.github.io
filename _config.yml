@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Maitner Lab"
+title                    : "Brian Maitner"
 title_separator          : "-"
 name                     : &name "Dr. Brian S. Maitner"
-description              : &description "The Maitner Lab at the University of South Florida, led by ecologist Brian Maitner, studies macroecology, biogeography, functional traits, and conservation using Big Data and field research."
+description              : &description "Brian Maitner is an ecologist and Assistant Professor of Global Change at the University of South Florida St. Petersburg, studying biodiversity, macroecology, plant functional traits, and conservation using Big Data and field research."
 url                      : https://bmaitner.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "bmaitner/bmaitner.github.io"
@@ -73,7 +73,9 @@ social:
     - "https://scholar.google.com/citations?user=GVb9deIAAAAJ"
     - "https://github.com/bmaitner"
     - "https://www.researchgate.net/profile/Brian-Maitner"
-    - "https://twitter.com/BrianMaitner"
+    - "https://bsky.app/profile/maitner.bsky.social"
+    - "https://x.com/BrianMaitner"
+    - "https://maitnerlab.github.io/"
 
 
 # Analytics
@@ -91,16 +93,19 @@ author:
   avatar           : "profile.png"
   bio              : "Studying biodiversity using Big Data and field research"
   location         : "St. Petersburg, FL"
-  employer         : "University of South Florida"
-  employer_url     : "https://www.usf.edu/"
-  job_title        : # TODO(Brian): e.g. "Assistant Professor of Integrative Biology"
+  employer         : "University of South Florida St. Petersburg"
+  employer_url     : "https://www.usf.edu/usf-st-petersburg/"
+  job_title        : "Assistant Professor of Global Change"
+  lab_name         : "Maitner Lab"
+  lab_url          : "https://maitnerlab.github.io/"
   knows_about      : ["Macroecology", "Biogeography", "Functional traits", "Biodiversity informatics", "Conservation biology", "Community ecology"]
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=Brian+Maitner"
   googlescholar    : "https://scholar.google.com/citations?user=GVb9deIAAAAJ&hl"
-  email            : # TODO(Brian): your USF email, e.g. "you@usf.edu"
+  email            : "bmaitner@usf.edu"
   researchgate     : "https://www.researchgate.net/profile/Brian-Maitner"
   uri              :
   bitbucket        :
+  bluesky          : "maitner.bsky.social"
   codepen          :
   dribbble         :
   flickr           :
@@ -131,7 +136,7 @@ author:
 include:
   - .htaccess
   - _pages
-  - files
+
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -160,7 +165,6 @@ exclude:
   - .Rproj.user
   # AcademicPages template placeholders, hidden so search engines don't index
   # them. Delete a line once you replace that page with real content.
-  # (Placeholder collection items are hidden via `defaults` below.)
   - _pages/archive-layout-with-content.md
   - _pages/collection-archive.html
   - _pages/cv.md
@@ -170,14 +174,10 @@ exclude:
   - _pages/portfolio.html
   - _pages/talkmap.html
   - _pages/talks.html
-  - _pages/teaching.html
   - _pages/terms.md
   - _pages/year-archive.html
   - _pages/category-archive.html
   - _pages/tag-archive.html
-  - files/paper1.pdf
-  - files/paper2.pdf
-  - files/paper3.pdf
   - markdown_generator
   - talkmap
   - talkmap.py
@@ -212,9 +212,6 @@ kramdown:
 # Collections
 collections:
   teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
     output: true
     permalink: /:collection/:path/
   portfolio:
@@ -254,15 +251,6 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
   # _portfolio
   - scope:
       path: ""
@@ -280,29 +268,6 @@ defaults:
       layout: talk
       author_profile: true
       share: true
-
-  # Hide AcademicPages template placeholder content so search engines don't
-  # index it. Delete a scope here once you replace that content with your own.
-  - scope:
-      path: "_posts"
-    values:
-      published: false
-  - scope:
-      path: "_talks"
-    values:
-      published: false
-  - scope:
-      path: "_teaching"
-    values:
-      published: false
-  - scope:
-      path: "_portfolio"
-    values:
-      published: false
-  - scope:
-      path: "_publications/template"
-    values:
-      published: false
 
 # Sass/SCSS
 sass:
