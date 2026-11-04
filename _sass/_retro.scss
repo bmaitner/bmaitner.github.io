@@ -1,25 +1,56 @@
 /* ==========================================================================
-   Retro "Synthwave" skin
-   Matches the dark mode of the Maitner Lab site (maitnerlab.github.io).
-   Fonts are loaded in _includes/head/custom.html.
+   Retro skin with light ("Miami Vice") and dark ("Synthwave") modes
+   Matches the Maitner Lab site (maitnerlab.github.io).
+
+   - Colors are CSS custom properties; html[data-theme="light"|"dark"] picks the set.
+   - _includes/head/custom.html sets data-theme before the page paints
+     (saved choice, else the visitor's system setting) and loads the fonts.
+   - _includes/masthead.html holds the toggle button.
    ========================================================================== */
 
-$retro-bg          : #120b2e;
-$retro-bg-deep     : #0a0620;
-$retro-panel       : #1d1245;
-$retro-text        : #e8e4ff;
-$retro-muted       : #b9a8ff;
-$retro-pink        : #ff2bd6;
-$retro-cyan        : #29f3ff;
-$retro-yellow      : #ffd23f;
-$retro-border      : #3b2a7a;
 $retro-heading-font: "Orbitron", sans-serif;
 $retro-body-font   : "Poppins", -apple-system, "Segoe UI", sans-serif;
 
-html, body { background-color: $retro-bg; }
+/* Dark: Synthwave (also the fallback when JavaScript is off) */
+:root, html[data-theme="dark"] {
+  --retro-bg: #120b2e;
+  --retro-bg-deep: #0a0620;
+  --retro-panel: #1d1245;
+  --retro-text: #e8e4ff;
+  --retro-muted: #b9a8ff;
+  --retro-accent-1: #ff2bd6;   // rules, title glow
+  --retro-accent-2: #29f3ff;   // links, h2
+  --retro-accent-3: #ffd23f;   // h3, bold
+  --retro-border: #3b2a7a;
+  --retro-nav-bg: #0a0620;
+  --retro-nav-link: #29f3ff;
+  --retro-link: #29f3ff;
+  --retro-title: #ffffff;
+  color-scheme: dark;
+}
+
+/* Light: Miami Vice */
+html[data-theme="light"] {
+  --retro-bg: #fffaf6;
+  --retro-bg-deep: #ffe3f3;
+  --retro-panel: #fff0f8;
+  --retro-text: #2b2240;
+  --retro-muted: #6b5a8a;
+  --retro-accent-1: #ff6ec7;
+  --retro-accent-2: #00a6a6;
+  --retro-accent-3: #c4007a;
+  --retro-border: #f3c6e2;
+  --retro-nav-bg: linear-gradient(90deg, #00b3b3, #5ad1e6 50%, #ff6ec7);
+  --retro-nav-link: #ffffff;
+  --retro-link: #c4007a;
+  --retro-title: #2b2240;
+  color-scheme: light;
+}
+
+html, body { background-color: var(--retro-bg); }
 
 body {
-  color: $retro-text;
+  color: var(--retro-text);
   font-family: $retro-body-font;
 }
 
@@ -29,31 +60,33 @@ h1, h2, h3, h4, h5, h6,
   letter-spacing: 0.03em;
 }
 
-a { color: $retro-cyan; }
-a:hover { color: $retro-pink; }
-a:visited { color: mix(#fff, $retro-cyan, 25%); }
+a, a:visited { color: var(--retro-link); }
+a:hover { color: var(--retro-accent-1); }
 
 /* Navigation bar */
 .masthead {
-  background-color: $retro-bg-deep;
-  border-bottom: 2px solid $retro-pink;
-  box-shadow: 0 0 18px rgba($retro-pink, 0.55);
+  background: var(--retro-nav-bg);
+  border-bottom: 2px solid var(--retro-accent-1);
 }
 
-.greedy-nav {
-  background: $retro-bg-deep;
+.masthead__inner-wrap { position: relative; }
+.masthead__menu { padding-right: 3rem; } // room for the theme toggle
 
-  a { color: $retro-cyan; }
-  a:hover { color: $retro-pink; }
-  .visible-links a:before { background: $retro-pink; }
-  button { background-color: $retro-pink; }
+.greedy-nav {
+  background: transparent;
+
+  a, a:visited { color: var(--retro-nav-link); }
+  a:hover { color: var(--retro-accent-1); }
+  .visible-links a:before { background: var(--retro-accent-1); }
+  button { background-color: var(--retro-accent-1); }
   .hidden-links {
-    background: $retro-bg-deep;
-    border-color: $retro-border;
-    a:hover { background: $retro-panel; color: $retro-pink; }
+    background: var(--retro-bg-deep);
+    border-color: var(--retro-border);
+    a, a:visited { color: var(--retro-text); }
+    a:hover { background: var(--retro-panel); color: var(--retro-accent-1); }
   }
-  .hidden-links:before { border-color: $retro-border transparent; }
-  .hidden-links:after { border-color: $retro-bg-deep transparent; }
+  .hidden-links:before { border-color: var(--retro-border) transparent; }
+  .hidden-links:after { border-color: var(--retro-bg-deep) transparent; }
 }
 
 .masthead__menu-item--lg a {
@@ -61,92 +94,122 @@ a:visited { color: mix(#fff, $retro-cyan, 25%); }
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: $retro-cyan !important;
-  text-shadow: 0 0 6px $retro-cyan, 0 0 16px $retro-cyan;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  transform: translateY(-50%);
+  width: 2.25em;
+  height: 2.25em;
+  padding: 0;
+  border: 2px solid var(--retro-nav-link);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--retro-nav-link);
+  cursor: pointer;
+  &:hover, &:focus-visible { border-color: var(--retro-accent-1); color: var(--retro-accent-1); }
+  .theme-toggle__sun { display: none; }
+}
+html[data-theme="light"] .theme-toggle {
+  .theme-toggle__sun { display: inline; }
+  .theme-toggle__moon { display: none; }
 }
 
 /* Sidebar / author profile */
-.author__avatar img {
-  border: 2px solid $retro-pink;
-  box-shadow: 0 0 22px rgba($retro-pink, 0.7);
-}
-
-.author__name { color: $retro-cyan; text-shadow: 0 0 10px rgba($retro-cyan, 0.75); }
-.author__bio { color: $retro-muted; }
+.author__avatar img { border: 2px solid var(--retro-accent-1); }
+.author__name { color: var(--retro-accent-2); }
+.author__bio { color: var(--retro-muted); }
 
 .author__urls {
-  background: $retro-bg-deep;
-  border-color: $retro-border;
+  background: var(--retro-bg-deep);
+  border-color: var(--retro-border);
   li { white-space: normal; } // Poppins is wider; let long names wrap instead of overflowing
-  a { color: $retro-text; }
-  a:hover { color: $retro-pink; text-decoration: none; }
-  &:before { border-color: $retro-border transparent; }
-  &:after { border-color: $retro-bg-deep transparent; }
+  a, a:visited { color: var(--retro-text); }
+  a:hover { color: var(--retro-accent-1); text-decoration: none; }
+  &:before { border-color: var(--retro-border) transparent; }
+  &:after { border-color: var(--retro-bg-deep) transparent; }
 }
 
 /* Brand icons whose default colors vanish on a dark background */
 .social-icons {
-  .fa-github, .fa-github-alt, .fa-github-square { color: $retro-text; }
+  .fa-github, .fa-github-alt, .fa-github-square { color: var(--retro-text); }
 }
 
 .btn--inverse {
-  color: $retro-cyan !important;
+  color: var(--retro-accent-2) !important;
   background-color: transparent;
-  border-color: $retro-cyan;
-  &:hover { color: $retro-bg !important; background-color: $retro-cyan; }
+  border-color: var(--retro-accent-2);
+  &:hover { color: var(--retro-bg) !important; background-color: var(--retro-accent-2); }
 }
 
 /* Page content */
 .page__title {
-  color: #fff;
+  color: var(--retro-title);
   text-transform: uppercase;
-  text-shadow: 0 0 4px #fff, 0 0 12px $retro-pink, 0 0 28px $retro-pink, 0 0 50px $retro-pink;
 }
 
 .page__content {
   h2 {
-    color: $retro-cyan;
-    border-bottom: 3px solid $retro-pink;
-    text-shadow: 0 0 10px rgba($retro-cyan, 0.75);
+    color: var(--retro-accent-2);
+    border-bottom: 3px solid var(--retro-accent-1);
   }
-  h3 { color: $retro-yellow; }
-  h4, h5, h6 { color: $retro-muted; }
-  strong { color: $retro-yellow; }
+  h3 { color: var(--retro-accent-3); }
+  h4, h5, h6 { color: var(--retro-muted); }
+  strong { color: var(--retro-accent-3); }
 }
 
-.archive__item-title { color: $retro-text; }
-.archive__item-excerpt, .page__meta, .archive__subtitle { color: $retro-muted; }
-.archive__subtitle { border-bottom-color: $retro-border; }
+.archive__item-title { color: var(--retro-text); }
+.archive__item-excerpt, .page__meta, .archive__subtitle { color: var(--retro-muted); }
+.archive__subtitle { border-bottom-color: var(--retro-border); }
 
-hr { border-top-color: $retro-border; }
+hr { border-top-color: var(--retro-border); }
 
 blockquote {
-  border-left-color: $retro-pink;
-  color: $retro-muted;
+  border-left-color: var(--retro-accent-1);
+  color: var(--retro-muted);
 }
 
 table {
-  border-color: $retro-border;
-  th, td { border-color: $retro-border; }
-  thead, tbody tr:nth-child(even) { background: $retro-panel; }
+  border-color: var(--retro-border);
+  th, td { border-color: var(--retro-border); }
+  thead, tbody tr:nth-child(even) { background: var(--retro-panel); }
 }
 
 code, pre, div.highlighter-rouge, figure.highlight,
 p > code, a > code, li > code, figcaption > code, td > code {
-  background: $retro-panel;
-  color: $retro-cyan;
-  border-color: $retro-border;
+  background: var(--retro-panel);
+  color: var(--retro-accent-3);
+  border-color: var(--retro-border);
 }
 
 .notice, [class*="notice--"] {
-  background-color: $retro-panel;
-  color: $retro-text;
+  background-color: var(--retro-panel);
+  color: var(--retro-text);
 }
 
 /* Footer */
 .page__footer {
-  background-color: $retro-bg-deep;
-  color: $retro-muted;
-  border-top: 2px solid $retro-pink;
-  a { color: $retro-cyan; }
+  background: var(--retro-bg-deep);
+  color: var(--retro-muted);
+  border-top: 2px solid var(--retro-accent-1);
+  a, a:visited { color: var(--retro-link); }
+}
+
+/* Effects: neon glow in dark mode, flat offset shadows in light mode */
+html:not([data-theme="light"]) {
+  .masthead { box-shadow: 0 0 18px rgba(255, 43, 214, 0.55); }
+  .masthead__menu-item--lg a { text-shadow: 0 0 6px #29f3ff, 0 0 16px #29f3ff; }
+  .author__avatar img { box-shadow: 0 0 22px rgba(255, 43, 214, 0.7); }
+  .author__name { text-shadow: 0 0 10px rgba(41, 243, 255, 0.75); }
+  .page__title { text-shadow: 0 0 4px #fff, 0 0 12px #ff2bd6, 0 0 28px #ff2bd6, 0 0 50px #ff2bd6; }
+  .page__content h2 { text-shadow: 0 0 10px rgba(41, 243, 255, 0.75); }
+  .theme-toggle { box-shadow: 0 0 10px rgba(41, 243, 255, 0.6); }
+}
+
+html[data-theme="light"] {
+  .masthead__menu-item--lg a { text-shadow: 2px 2px 0 #ff6ec7; }
+  .author__avatar img { box-shadow: 6px 6px 0 #ff6ec7, 12px 12px 0 #00a6a6; }
+  .page__title { text-shadow: 3px 3px 0 #ff6ec7, 6px 6px 0 #5ad1e6; }
 }

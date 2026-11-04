@@ -7,7 +7,31 @@
 <link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-16x16.png" sizes="16x16">
 <link rel="apple-touch-icon" href="{{ base_path }}/images/apple-touch-icon.png">
 <link rel="manifest" href="{{ base_path }}/images/site.webmanifest">
-<meta name="theme-color" content="#120b2e">
+<meta name="theme-color" content="#120b2e" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#00b3b3" media="(prefers-color-scheme: light)">
+<script>
+  /* Light/dark mode: use the visitor's saved choice, else their system setting.
+     Runs before the page paints so there's no flash of the wrong theme. */
+  (function () {
+    var saved = null;
+    try { saved = localStorage.getItem("theme"); } catch (e) {}
+    var media = window.matchMedia ? window.matchMedia("(prefers-color-scheme: light)") : null;
+    function apply(theme) { document.documentElement.setAttribute("data-theme", theme); }
+    apply(saved || (media && media.matches ? "light" : "dark"));
+    if (media && media.addEventListener) {
+      media.addEventListener("change", function (e) {
+        var stillSaved = null;
+        try { stillSaved = localStorage.getItem("theme"); } catch (err) {}
+        if (!stillSaved) apply(e.matches ? "light" : "dark");
+      });
+    }
+    window.toggleTheme = function () {
+      var next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+      apply(next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
+    };
+  })();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@400;600;700&display=swap">
