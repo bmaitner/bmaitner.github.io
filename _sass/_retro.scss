@@ -1,0 +1,152 @@
+/* ==========================================================================
+   Retro "Synthwave" skin
+   Matches the dark mode of the Maitner Lab site (maitnerlab.github.io).
+   Fonts are loaded in _includes/head/custom.html.
+   ========================================================================== */
+
+$retro-bg          : #120b2e;
+$retro-bg-deep     : #0a0620;
+$retro-panel       : #1d1245;
+$retro-text        : #e8e4ff;
+$retro-muted       : #b9a8ff;
+$retro-pink        : #ff2bd6;
+$retro-cyan        : #29f3ff;
+$retro-yellow      : #ffd23f;
+$retro-border      : #3b2a7a;
+$retro-heading-font: "Orbitron", sans-serif;
+$retro-body-font   : "Poppins", -apple-system, "Segoe UI", sans-serif;
+
+html, body { background-color: $retro-bg; }
+
+body {
+  color: $retro-text;
+  font-family: $retro-body-font;
+}
+
+h1, h2, h3, h4, h5, h6,
+.page__title, .archive__subtitle, .author__name {
+  font-family: $retro-heading-font;
+  letter-spacing: 0.03em;
+}
+
+a { color: $retro-cyan; }
+a:hover { color: $retro-pink; }
+a:visited { color: mix(#fff, $retro-cyan, 25%); }
+
+/* Navigation bar */
+.masthead {
+  background-color: $retro-bg-deep;
+  border-bottom: 2px solid $retro-pink;
+  box-shadow: 0 0 18px rgba($retro-pink, 0.55);
+}
+
+.greedy-nav {
+  background: $retro-bg-deep;
+
+  a { color: $retro-cyan; }
+  a:hover { color: $retro-pink; }
+  .visible-links a:before { background: $retro-pink; }
+  button { background-color: $retro-pink; }
+  .hidden-links {
+    background: $retro-bg-deep;
+    border-color: $retro-border;
+    a:hover { background: $retro-panel; color: $retro-pink; }
+  }
+  .hidden-links:before { border-color: $retro-border transparent; }
+  .hidden-links:after { border-color: $retro-bg-deep transparent; }
+}
+
+.masthead__menu-item--lg a {
+  font-family: $retro-heading-font;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $retro-cyan !important;
+  text-shadow: 0 0 6px $retro-cyan, 0 0 16px $retro-cyan;
+}
+
+/* Sidebar / author profile */
+.author__avatar img {
+  border: 2px solid $retro-pink;
+  box-shadow: 0 0 22px rgba($retro-pink, 0.7);
+}
+
+.author__name { color: $retro-cyan; text-shadow: 0 0 10px rgba($retro-cyan, 0.75); }
+.author__bio { color: $retro-muted; }
+
+.author__urls {
+  background: $retro-bg-deep;
+  border-color: $retro-border;
+  li { white-space: normal; } // Poppins is wider; let long names wrap instead of overflowing
+  a { color: $retro-text; }
+  a:hover { color: $retro-pink; text-decoration: none; }
+  &:before { border-color: $retro-border transparent; }
+  &:after { border-color: $retro-bg-deep transparent; }
+}
+
+/* Brand icons whose default colors vanish on a dark background */
+.social-icons {
+  .fa-github, .fa-github-alt, .fa-github-square { color: $retro-text; }
+}
+
+.btn--inverse {
+  color: $retro-cyan !important;
+  background-color: transparent;
+  border-color: $retro-cyan;
+  &:hover { color: $retro-bg !important; background-color: $retro-cyan; }
+}
+
+/* Page content */
+.page__title {
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 0 4px #fff, 0 0 12px $retro-pink, 0 0 28px $retro-pink, 0 0 50px $retro-pink;
+}
+
+.page__content {
+  h2 {
+    color: $retro-cyan;
+    border-bottom: 3px solid $retro-pink;
+    text-shadow: 0 0 10px rgba($retro-cyan, 0.75);
+  }
+  h3 { color: $retro-yellow; }
+  h4, h5, h6 { color: $retro-muted; }
+  strong { color: $retro-yellow; }
+}
+
+.archive__item-title { color: $retro-text; }
+.archive__item-excerpt, .page__meta, .archive__subtitle { color: $retro-muted; }
+.archive__subtitle { border-bottom-color: $retro-border; }
+
+hr { border-top-color: $retro-border; }
+
+blockquote {
+  border-left-color: $retro-pink;
+  color: $retro-muted;
+}
+
+table {
+  border-color: $retro-border;
+  th, td { border-color: $retro-border; }
+  thead, tbody tr:nth-child(even) { background: $retro-panel; }
+}
+
+code, pre, div.highlighter-rouge, figure.highlight,
+p > code, a > code, li > code, figcaption > code, td > code {
+  background: $retro-panel;
+  color: $retro-cyan;
+  border-color: $retro-border;
+}
+
+.notice, [class*="notice--"] {
+  background-color: $retro-panel;
+  color: $retro-text;
+}
+
+/* Footer */
+.page__footer {
+  background-color: $retro-bg-deep;
+  color: $retro-muted;
+  border-top: 2px solid $retro-pink;
+  a { color: $retro-cyan; }
+}
