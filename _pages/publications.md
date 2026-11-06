@@ -12,6 +12,18 @@ redirect_from:
 
 A selection of my papers. For the complete list of papers, preprints, R packages, and datasets, see the [Maitner Lab publications page](https://maitnerlab.github.io/publications.html), my [Google Scholar profile](https://scholar.google.com/citations?user=GVb9deIAAAAJ), or [ORCID](https://orcid.org/0000-0002-2118-9880).
 
+## Preprints
+
+- Gaüzère P, Mahaut L, Denelle P, …, **Maitner BS**, et al. (2026). Scale dependence of avian functional rarity reveals mismatches between global and local conservation priorities. *EcoEvoRxiv*. In press at *Diversity and Distributions*. [doi:10.32942/x2x37p](https://doi.org/10.32942/x2x37p)
+
+- Merow C, Serra-Diaz JM, Carlson BS, **Maitner BS**, et al. (2025). Unprecedented heat threatened 1 in 10 vertebrate species in 2023. *Research Square*. [doi:10.21203/rs.3.rs-4914374/v1](https://doi.org/10.21203/rs.3.rs-4914374/v1)
+
+- Moulatlet GM, Capparelli M, Thomas C, …, **Maitner BS**, et al. (2025). Amazon biodiversity is at risk from metal contamination due to mining activity. *bioRxiv*. [doi:10.1101/2025.05.21.654597](https://doi.org/10.1101/2025.05.21.654597)
+
+- Montes-Bojórquez MG, …, **Maitner BS**, et al. (2025). Challenges and opportunities in detecting leaf water and carotenoid content across biomes from satellite multispectral indices. *bioRxiv*. [doi:10.1101/2025.11.01.686024](https://doi.org/10.1101/2025.11.01.686024)
+
+## Peer-reviewed papers
+
 - Serra-Diaz JM, Andrews LC, …, **Maitner B**, et al. (2026). A global early warning system for predicting exposure of biodiversity to extreme heat. *Nature Climate Change*. [doi:10.1038/s41558-026-02642-9](https://doi.org/10.1038/s41558-026-02642-9)
 
 - **Maitner B**, Richards RL, Carlson B, et al. (2026). Flexible methods for species distribution modeling with small samples. *Ecography*. [doi:10.1002/ecog.08112](https://doi.org/10.1002/ecog.08112)

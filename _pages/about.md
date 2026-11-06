@@ -27,6 +27,10 @@ I believe in an open, inclusive, and collaborative approach to science. I help d
 
 See [selected publications](/publications/), or the [full list on the lab website](https://maitnerlab.github.io/publications.html).
 
+## Beyond research
+
+Outside of work I'm an avid reader (golden age sci-fi, classic literature, philosophy, and comic books) and a fan of music and movies, especially from the 80s. I'm also a toy fan (action figures and Legos), which is where my [Transformers and Glyos color palette packages](/software/#color-palettes) came from. You can find my record collection on [Discogs](https://www.discogs.com/user/bmaitner) and the movies I've been watching on [Letterboxd](https://letterboxd.com/maitner/).
+
 ## Contact
 
 Email: [bmaitner@usf.edu](mailto:bmaitner@usf.edu)
