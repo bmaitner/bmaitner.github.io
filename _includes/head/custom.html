@@ -2,9 +2,9 @@
 
 <!-- start custom head snippets -->
 
-<link rel="icon" href="{{ base_path }}/images/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-16x16.png" sizes="16x16">
+<!-- Favicons: dark set by default; the theme script below swaps in the light set (data-light) in light mode. -->
+<link rel="icon" class="theme-icon" type="image/png" sizes="32x32" href="{{ base_path }}/images/favicon-32x32.png" data-dark="{{ base_path }}/images/favicon-32x32.png" data-light="{{ base_path }}/images/favicon-light-32x32.png">
+<link rel="icon" class="theme-icon" type="image/png" sizes="16x16" href="{{ base_path }}/images/favicon-16x16.png" data-dark="{{ base_path }}/images/favicon-16x16.png" data-light="{{ base_path }}/images/favicon-light-16x16.png">
 <link rel="apple-touch-icon" href="{{ base_path }}/images/apple-touch-icon.png">
 <link rel="manifest" href="{{ base_path }}/images/site.webmanifest">
 <meta name="theme-color" content="#120b2e" media="(prefers-color-scheme: dark)">
@@ -16,7 +16,14 @@
     var saved = null;
     try { saved = localStorage.getItem("theme"); } catch (e) {}
     var media = window.matchMedia ? window.matchMedia("(prefers-color-scheme: light)") : null;
-    function apply(theme) { document.documentElement.setAttribute("data-theme", theme); }
+    function apply(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      var icons = document.querySelectorAll("link.theme-icon");
+      for (var i = 0; i < icons.length; i++) {
+        var href = icons[i].getAttribute("data-" + theme);
+        if (href && icons[i].getAttribute("href") !== href) icons[i].setAttribute("href", href);
+      }
+    }
     apply(saved || (media && media.matches ? "light" : "dark"));
     if (media && media.addEventListener) {
       media.addEventListener("change", function (e) {
