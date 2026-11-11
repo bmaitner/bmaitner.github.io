@@ -19,6 +19,7 @@ I believe in an open, inclusive, and collaborative approach to science. I help d
 
 ## Featured publications
 
+- Pillet MD, **Maitner BS**, Arakaki M, …, Enquist BJ (2026). Severe drought and warming increase the extinction risk of cacti. *Nature*. [doi:10.1038/s41586-026-11265-1](https://doi.org/10.1038/s41586-026-11265-1) · [Nature research briefing](https://www.nature.com/articles/d41586-026-03496-z) · [Nature Podcast](https://www.nature.com/articles/d41586-026-03671-2)
 - Serra-Diaz JM, et al., incl. **Maitner B** (2026). A global early warning system for predicting exposure of biodiversity to extreme heat. *Nature Climate Change*. [doi:10.1038/s41558-026-02642-9](https://doi.org/10.1038/s41558-026-02642-9)
 - **Maitner BS**, Richards RL, Carlson BS, Drake JM, Merow C (2026). Flexible methods for species distribution modeling with small samples. *Ecography*. [doi:10.1002/ecog.08112](https://doi.org/10.1002/ecog.08112)
 - Merow C, **Maitner BS**, et al. (2025). Hottest year in recorded history compounds global biodiversity risks. *PNAS*. [doi:10.1073/pnas.2504945122](https://doi.org/10.1073/pnas.2504945122)

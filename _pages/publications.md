@@ -24,6 +24,8 @@ A selection of my papers. For the complete list of papers, preprints, R packages
 
 ## Peer-reviewed papers
 
+- Pillet MD, **Maitner BS**, Arakaki M, …, Enquist BJ (2026). Severe drought and warming increase the extinction risk of cacti. *Nature*. [doi:10.1038/s41586-026-11265-1](https://doi.org/10.1038/s41586-026-11265-1)
+
 - Serra-Diaz JM, Andrews LC, …, **Maitner B**, et al. (2026). A global early warning system for predicting exposure of biodiversity to extreme heat. *Nature Climate Change*. [doi:10.1038/s41558-026-02642-9](https://doi.org/10.1038/s41558-026-02642-9)
 
 - **Maitner B**, Richards RL, Carlson B, et al. (2026). Flexible methods for species distribution modeling with small samples. *Ecography*. [doi:10.1002/ecog.08112](https://doi.org/10.1002/ecog.08112)
